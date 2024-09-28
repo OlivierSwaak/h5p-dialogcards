@@ -1,6 +1,6 @@
 {
-  "name": "h5p-dialogcards",
-  "version": "1.7.3",
+  "name": "h5p-dialogcards-code",
+  "version": "1.7.4",
   "description": "H5P Dialogue Cards ==========",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/h5p/h5p-dialogcards.git"
+    "url": "git+https://github.com/OlivierSwaak/h5p-dialogcards.git"
   },
   "keywords": [],
   "author": "Joubel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/h5p/h5p-dialogcards/issues"
+    "url": "https://github.com/OlivierSwaak/h5p-dialogcards/issues"
   },
-  "homepage": "https://github.com/h5p/h5p-dialogcards#readme",
+  "homepage": "https://github.com/OlivierSwaak/h5p-dialogcards#readme",
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
