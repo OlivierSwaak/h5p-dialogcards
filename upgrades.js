@@ -1,6 +1,6 @@
 var H5PUpgrades = H5PUpgrades || {};
 
-H5PUpgrades['H5P.Dialogcards'] = (function () {
+H5PUpgrades['H5P.DialogcardsCode'] = (function () {
   return {
     1: {
       /**

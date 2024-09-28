@@ -4,7 +4,7 @@ import SummaryScreen from './h5p-dialogcards-summary-screen';
 const $ = H5P.jQuery;
 const JoubelUI = H5P.JoubelUI;
 
-class Dialogcards extends H5P.EventDispatcher {
+class DialogcardsCode extends H5P.EventDispatcher {
   /**
    * Initialize module.
    *
@@ -13,7 +13,7 @@ class Dialogcards extends H5P.EventDispatcher {
    * @param {Object} params Parameters.
    * @param {Number} id Content id.
    * @param {Object} contentData Content data, e.g. for saveContentState
-   * @returns {DialogCards} self
+   * @returns {DialogCardsCode} self
    */
   constructor(params, id, contentData) {
     super();
