@@ -4,7 +4,7 @@ import SummaryScreen from './h5p-dialogcards-summary-screen';
 const $ = H5P.jQuery;
 const JoubelUI = H5P.JoubelUI;
 
-class DialogcardsCode extends H5P.EventDispatcher {
+class DialogCardsCode extends H5P.EventDispatcher {
   /**
    * Initialize module.
    *
@@ -17,7 +17,7 @@ class DialogcardsCode extends H5P.EventDispatcher {
    */
   constructor(params, id, contentData) {
     super();
-    this.idCounter = Dialogcards.idCounter++;
+    this.idCounter = DialogCardsCode.idCounter++;
     this.contentId = this.id = id;
     this.previousState = contentData.previousState || {};
 
@@ -92,7 +92,7 @@ class DialogcardsCode extends H5P.EventDispatcher {
      * @param {jQuery} $container Container.
      */
     this.attach = ($container) => {
-      this.$inner = $container.addClass('h5p-dialogcards');
+      this.$inner = $container.addClass('h5p-dialogcardscode');
       if (this.params.behaviour.scaleTextNotCard) {
         $container.addClass('h5p-text-scaling');
       }
@@ -810,10 +810,10 @@ class DialogcardsCode extends H5P.EventDispatcher {
         // Decrease font size
         if (containerHeight < contentHeight) {
           while (containerHeight < contentHeight) {
-            newFontSize -= Dialogcards.SCALEINTERVAL;
+            newFontSize -= DialogCardsCode.SCALEINTERVAL;
 
             // Cap at min font size
-            if (newFontSize < Dialogcards.MINSCALE) {
+            if (newFontSize < DialogCardsCode.MINSCALE) {
               break;
             }
 
@@ -825,10 +825,10 @@ class DialogcardsCode extends H5P.EventDispatcher {
         else { // Increase font size
           let increaseFontSize = true;
           while (increaseFontSize) {
-            newFontSize += Dialogcards.SCALEINTERVAL;
+            newFontSize += DialogCardsCode.SCALEINTERVAL;
 
             // Cap max font size
-            if (newFontSize > Dialogcards.MAXSCALE) {
+            if (newFontSize > DialogCardsCode.MAXSCALE) {
               increaseFontSize = false;
               break;
             }
@@ -839,7 +839,7 @@ class DialogcardsCode extends H5P.EventDispatcher {
             contentHeight = getContentHeight();
             if (containerHeight <= contentHeight) {
               increaseFontSize = false;
-              relativeFontSize = (newFontSize - Dialogcards.SCALEINTERVAL) / parentFontSize;
+              relativeFontSize = (newFontSize - DialogCardsCode.SCALEINTERVAL) / parentFontSize;
               this.$inner.css('font-size', relativeFontSize + 'em');
             }
           }
@@ -936,11 +936,11 @@ class DialogcardsCode extends H5P.EventDispatcher {
   }
 }
 
-Dialogcards.idCounter = 0;
+DialogCardsCode.idCounter = 0;
 
 // Constants
-Dialogcards.SCALEINTERVAL = 0.2;
-Dialogcards.MAXSCALE = 16;
-Dialogcards.MINSCALE = 4;
+DialogCardsCode.SCALEINTERVAL = 0.2;
+DialogCardsCode.MAXSCALE = 16;
+DialogCardsCode.MINSCALE = 4;
 
-export default Dialogcards;
+export default DialogCardsCode;
