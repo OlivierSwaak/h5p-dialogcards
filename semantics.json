@@ -76,7 +76,8 @@
             "br",
             "strong",
             "em",
-            "code"
+            "code",
+            "pre"
           ],
           "label": "Text",
           "importance": "high",
@@ -92,7 +93,8 @@
             "br",
             "strong",
             "em",
-            "code"
+            "code",
+            "pre"
           ],
           "label": "Answer",
           "importance": "high",
